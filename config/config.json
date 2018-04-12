@@ -1,0 +1,26 @@
+{
+  "ISS": "localhost",
+  "TOKEN_SECRET": "3q7rY1IpQgMM4DE5Pe1tTiC0X4ke74WTL0wDzRoqWjeltvXgh6Er2qaoRqKA",
+  "TOKEN_AUTHONRIZATION": "796c6345-0cbf-4531-aa64-d5fda5a4ed0f",
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "project_starter",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
