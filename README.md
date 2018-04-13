@@ -1,11 +1,11 @@
-Install Express
+This project was server-express with [Create ExpressJS](https://expressjs.com/) and use Express generator for generate project.
+
+## Install Express and Sequelize
 npm install express express-generator
   - express . -f
 npm install sequelize-cli -g
  - sequelize init
-
- This project was server-express with [Create ExpressJS](https://expressjs.com/) and use Express generator for generate project.
-
+ 
 ## Table of Contents
 
 - [Folder Structure](#folder-structure)
