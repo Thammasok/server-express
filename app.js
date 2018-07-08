@@ -4,9 +4,7 @@ const expressValidator= require('express-validator');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-
-const index = require('./routes/index');
-const users = require('./routes/users');
+const fs = require('fs');
 
 const app = express();
 
@@ -19,8 +17,16 @@ app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+const index = require('./routes/index');
 app.use('/', index);
-app.use('/users', users);
+
+var files = fs.readdirSync('./routes/v1');
+for (var i in files) {
+  const routeName = require('./routes/v1/' + files[i]);
+  let fileName = files[i].replace(/\.[^/.]+$/, "");
+  app.use('/api/' + fileName, routeName);
+}
 
 
 // error handler
