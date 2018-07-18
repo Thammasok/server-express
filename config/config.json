@@ -3,24 +3,45 @@
   "TOKEN_SECRET": "3q7rY1IpQgMM4DE5Pe1tTiC0X4ke74WTL0wDzRoqWjeltvXgh6Er2qaoRqKA",
   "TOKEN_AUTHONRIZATION": "796c6345-0cbf-4531-aa64-d5fda5a4ed0f",
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "project_starter",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "mysql": {
+      "username": "root",
+      "password": "root",
+      "database": "project_starter",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "mongodb": {
+      "host": "127.0.0.1",
+      "port": "",
+      "database": "simple"
+    }
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "mysql": {
+      "username": "root",
+      "password": null,
+      "database": "database_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "mongodb": {
+      "host": "127.0.0.1",
+      "port": "",
+      "database": "simple"
+    }
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "mysql": {
+      "username": "root",
+      "password": null,
+      "database": "database_production",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "mongodb": {
+      "host": "127.0.0.1",
+      "port": "",
+      "database": "simple"
+    }
   }
 }

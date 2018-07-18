@@ -6,6 +6,10 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 
+const env       = process.env.NODE_ENV || 'development';
+const config    = require('./config/config.json')[env];
+const MongoConnector = require('./mongo_models');
+
 const app = express();
 
 // uncomment after placing your favicon in /public
@@ -28,6 +32,11 @@ for (var i in files) {
   app.use('/api/' + fileName, routeName);
 }
 
+MongoConnector({
+  host: config.mongodb.host,
+  port: config.mongodb.port,
+  database: config.mongodb.database
+}).connect();
 
 // error handler
 app.use(function(err, req, res, next) {
