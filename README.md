@@ -4,6 +4,7 @@ This project was server-express with [Create ExpressJS](https://expressjs.com/) 
 
 - [Express and Sequelize Example](#express-and-sequelize-example)
 - [Folder Structure](#folder-structure)
+- [Create Database Table](#create-database-table)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
@@ -197,6 +198,26 @@ my-app/
   .env.example
   app.js
 ```
+
+## Create Database Table
+
+Before run script, you will create Users table on Database.
+
+CREATE TABLE `Users` (
+  `id` int(11) NOT NULL,
+  `displayname` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+ALTER TABLE `Users`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `Users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 ## Available Scripts
 
