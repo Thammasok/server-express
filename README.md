@@ -203,6 +203,7 @@ my-app/
 
 Before run script, you will create Users table on Database.
 
+```
 CREATE TABLE `Users` (
   `id` int(11) NOT NULL,
   `displayname` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
@@ -218,6 +219,7 @@ ALTER TABLE `Users`
 ALTER TABLE `Users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
+```
 
 ## Available Scripts
 
